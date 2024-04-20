@@ -1,4 +1,6 @@
 
+import './chart'
+
         // show hide sidebar    
         document.addEventListener("DOMContentLoaded", function () {
             const sidebarToggle = document.getElementById("sidebarToggle");
