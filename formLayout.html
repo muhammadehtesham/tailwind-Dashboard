@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Layout</title>
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- css  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- flowbite link  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="flex">
+        <!-- SIDEBAR -->
+        <div id="sideBar"
+            class="fixed z-10 lg:w-[17em] w-0 h-[100vh] bg-[#1c2434] transition-width duration-300 ease-in-out">
+            <div id="sideBar_inner">
+                <!--sideBar header  -->
+                <div id="sideBar_header" class=" h-20 p-5 px-5 flex justify-between items-center">
+                    <img src="./images/logo/logo.svg" alt="">
+                    <i class="fa-solid fa-arrow-left text-white lg:hidden relative right-3"></i>
+                </div>
+
+                <!-- sidebar nav  -->
+                <nav class="h-[90vh] p-10 px-4 overflow-y-scroll scrollbar-hide">
+                    <!-- sidebar menu group -->
+                    <div id="sideBar-menu">
+                        <div id="sideBar-menu-inner">
+                            <h3 class="ml-4 text-base text-slate-400 uppercase">Menu</h3>
+                            <ul class="px-0 text-base mt-4">
+                                <!-- dashboard dropdown  -->
+                                <li class="dropdown relative text-white bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fas fa-border-all mr-2"></i> Dashboard
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform "></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu  text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">eCommerce</a></li>
+                                    <li class="hover:text-white"><a href="#">Analytics</a></li>
+                                    <li class="hover:text-white"><a href="#">Marketing</a></li>
+                                    <li class="hover:text-white"><a href="#">CRM</a></li>
+                                    <li class="hover:text-white"><a href="#">Stocks</a></li>
+                                </ul>
+
+                                <!-- Calendar  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-calendar mr-2"></i>Calendar
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Profile  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-user mr-2"></i>Profile
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- Task dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-list"></i> Task
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">List</a></li>
+                                    <li class="hover:text-white"><a href="#">Kanban</a></li>
+
+                                </ul>
+
+                                <!-- Forms dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-file-word mr-2"></i> Forms
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Form Elements</a></li>
+                                    <li class="hover:text-white"><a href="#">Form Layout</a></li>
+                                    <li class="hover:text-white"><a href="#">Pro Form Layout</a></li>
+                                </ul>
+
+                                <!-- Tables dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-table mr-2"></i> Tables
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Tables</a></li>
+                                    <li class="hover:text-white"><a href="#">Pro Tables</a></li>
+                                </ul>
+
+                                <!-- Pages dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-file-lines mr-2"></i> Pages
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Setting</a></li>
+                                    <li class="hover:text-white"><a href="#">File Manager</a></li>
+                                    <li class="hover:text-white"><a href="#">Data Tables</a></li>
+                                    <li class="hover:text-white"><a href="#">Pricing Tables</a></li>
+                                    <li class="hover:text-white"><a href="#">Faq's</a></li>
+                                    <li class="hover:text-white"><a href="#">Teams</a></li>
+                                    <li class="hover:text-white"><a href="#">Teams & Conditions</a></li>
+                                    <li class="hover:text-white"><a href="#">Mail Success</a></li>
+                                </ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- sidebar support group  -->
+                    <div id="sideBar-support">
+                        <div id="sideBar-support-inner">
+                            <h3 class="ml-4 mt-4 text-base text-slate-400 uppercase">support</h3>
+                            <ul class="px-0 text-base mt-2">
+                                <!-- Messages  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-envelope mr-2"></i> Messages
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Inbox  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-download mr-2"></i>Inbox
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Invoice  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-receipt mr-2"></i>Invoice
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- side bar other group  -->
+                    <div id="sideBar-other">
+                        <div id="sideBar-other-inner">
+                            <h3 class="ml-4 mt-4 text-base text-slate-400 uppercase">Others</h3>
+                            <ul class="px-0 text-base mt-2">
+                                <!-- Chart dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="rotate_arrow fa-solid fa-chart-pie mr-2 transform -rotate-90"></i>
+                                            Chart
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Basic Chart</a></li>
+                                    <li class="hover:text-white"><a href="#">Advanced Chart</a></li>
+                                </ul>
+
+                                <!-- UI Elements dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-building mr-2"></i> UI Elements
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Accordion</a></li>
+                                    <li class="hover:text-white"><a href="#">Alerts</a></li>
+                                    <li class="hover:text-white"><a href="#">Avatars</a></li>
+                                    <li class="hover:text-white"><a href="#">Badge</a></li>
+                                    <li class="hover:text-white"><a href="#">Breadcrumb</a></li>
+                                    <li class="hover:text-white"><a href="#">Buttons</a></li>
+                                    <li class="hover:text-white"><a href="#">Buttons Group</a></li>
+                                    <li class="hover:text-white"><a href="#">Cards</a></li>
+                                    <li class="hover:text-white"><a href="#">Carousel</a></li>
+                                    <li class="hover:text-white"><a href="#">Dropdowns</a></li>
+                                    <li class="hover:text-white"><a href="#">Images</a></li>
+                                    <li class="hover:text-white"><a href="#">List</a></li>
+                                    <li class="hover:text-white"><a href="#">Modals</a></li>
+                                    <li class="hover:text-white"><a href="#">Notifications</a></li>
+                                    <li class="hover:text-white"><a href="#">Pagination</a></li>
+                                    <li class="hover:text-white"><a href="#">Popovers</a></li>
+                                    <li class="hover:text-white"><a href="#">Progress</a></li>
+                                    <li class="hover:text-white"><a href="#">Spinners</a></li>
+                                    <li class="hover:text-white"><a href="#">Tabs</a></li>
+                                    <li class="hover:text-white"><a href="#">Tooltips</a></li>
+                                    <li class="hover:text-white"><a href="#">Videos</a></li>
+                                </ul>
+
+                                <!-- Authentication dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-fingerprint mr-2"></i> Authentication
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Sign In</a></li>
+                                    <li class="hover:text-white"><a href="#">Sign Up</a></li>
+                                    <li class="hover:text-white"><a href="#">Reset Password</a></li>
+                                    <li class="hover:text-white"><a href="#">Coming Soon</a></li>
+                                    <li class="hover:text-white"><a href="#">2 Step Verification</a></li>
+                                    <li class="hover:text-white"><a href="#">Under Maintenance</a></li>
+                                </ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- dashboard Content  -->
+        <div id="dashboard_content" class="fixed lg:w-[calc(100%-17rem)] w-[100%] right-0 ">
+            <!-- dashboard content  header -->
+            <div id="dashboard_header" class="grid grid-cols-10 px-6 h-20 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  ">
+                <!-- on small screen hamburgur  -->
+                <div id="hamburgur" class="flex items-center lg:hidden col-span-2 ">
+                    <div id="sidebarToggle" class="border-2 border-gray-400 p-1 px-2">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </div>
+                    <img src="./images/logo/logo-icon.svg" alt="" class="ml-2 ">
+                </div>
+                <!-- left    -->
+                <div id="dashboard_header_left" class="col-span-4 items-center hidden lg:flex">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass fa-lg text-gray-400 "></i>
+                        <input type="text" placeholder="Type to search..." class="  outline-0 border-0 ">
+                    </div>
+                </div>
+                <!-- right  -->
+                <div id="dashboard_header_right" class="flex justify-end items-center lg:col-span-6 col-span-8 ">
+                    <!-- light mode dark mode  -->
+                    <div class="switch_mode rounded-full ml-3 bg-gray-200 h-8 w-8 flex justify-center items-center">
+                        <i class="fa-regular fa-sun text-gray-400"></i>
+                    </div>
+                    <!-- bell notification -->
+                    <div class="rounded-full ml-3 bg-gray-200 h-8 w-8 flex justify-center items-center">
+                        <i class="fa-regular fa-bell text-gray-400"></i>
+                    </div>
+                    <!-- Messages -->
+                    <div class="rounded-full ml-3 bg-gray-200 h-8 w-8 flex justify-center items-center">
+                        <i class="fa-regular fa-comment-dots text-gray-400"></i>
+                    </div>
+                    <!-- profile -->
+                    <div id="profile dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" type="button"
+                        class="flex items-center sm:ml-6 ml-2 " id="">
+                        <div class="ml-2 hidden sm:block">
+                            <h1 class="text-base ">Angela Juli</h1>
+                            <p class="text-sm text-gray-500">UX Designer</p>
+                        </div>
+                        <div class="sm:w-12 sm:h-12 w-9 h-9 bg-gray-300 rounded-full overflow-hidden sm:ml-6 ">
+                            <img class="w-full h-full object-cover" src="./images/user-01.png" alt="Profile Picture">
+                        </div>
+                        <div class="ml-6 mr-3 hidden sm:block">
+                            <i class="rotate_arrow fas fa-angle-down transform text-gray-400"></i>
+                        </div>
+                    </div>
+                    <!-- profile dropdow content  "click on profile" -->
+                    <div id="dropdownDots" class="z-10 hidden bg-white  rounded-lg shadow w-44">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownMenuIconButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
+                                link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dashboard main content-->
+            <div id="dashboard_main_content"
+                class="-z-10 top-20  h-[88vh]  overflow-scroll scrollbar-hide pt-10 p-6  bg-slate-100">
+                <!-- Form Layout section  -->
+                <div class="grid grid-cols-1 gap-9 sm:grid-cols-2">
+                    <!-- 1 -->
+                    <div class="flex flex-col gap-9">
+                        <!--Contact Form-->
+                        <div class="rounded-sm border border-solid bg-white ">
+                            <div class="border-b border-solid px-6 py-4 ">
+                                <h3 class="font-medium text-black ">
+                                    Contact Form
+                                </h3>
+                            </div>
+                            <form action="#">
+                                <div class="p-6">
+                                    <!-- 1 name-->
+                                    <div class="mb-4 flex flex-col gap-6 lg:flex-row">
+                                        <div class="w-full xl:w-1/2">
+                                            <label class="mb-3 block text-sm font-medium text-black ">
+                                                First name
+                                            </label>
+                                            <input type="text" placeholder="Enter your first name"
+                                                class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                        </div>
+
+                                        <div class="w-full xl:w-1/2">
+                                            <label class="mb-3 block text-sm font-medium text-black ">
+                                                Last name
+                                            </label>
+                                            <input type="text" placeholder="Enter your last name"
+                                                class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                        </div>
+                                    </div>
+                                    <!-- 2 email -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Email <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="email" placeholder="Enter your email address"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- 3 subject  -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Subject
+                                        </label>
+                                        <input type="text" placeholder="Select subject"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- 4 select subject  -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Select Option
+                                        </label>
+                                        <select
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+                                        </select>
+                                    </div>
+                                    <!-- 5 message  -->
+                                    <div class="mb-6">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Message
+                                        </label>
+                                        <textarea rows="6" placeholder="Type your message"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition "></textarea>
+                                    </div>
+                                    <!-- button  -->
+                                    <button
+                                        class="flex w-full justify-center rounded bg-blue-600 p-3 font-medium text-white hover:bg-blue-500">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- 2 -->
+                    <div class="flex flex-col gap-9">
+                        <!-- Sign in Form  -->
+                        <div class="rounded-sm border border-solid bg-white ">
+                            <div class="border-b border-solid px-6 py-4 ">
+                                <h3 class="font-medium text-black ">
+                                    Sign In Form
+                                </h3>
+                            </div>
+                            <form action="#">
+                                <div class="p-6">
+                                    <!-- email -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Email <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="email" placeholder="Enter your email address"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- password -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Password <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="password" placeholder="Enter Password"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- forget  -->
+                                    <div class="flex justify-between mb-2">
+                                        <!-- Checkbox Div -->
+                                        <div class="mr-4">
+                                          <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600">
+                                          <label >Remember me </label>
+                                        </div>
+                                        <!-- Tag Div -->
+                                        <div class="text-blue-600">
+                                         <a href="#">Forget Password?</a>
+                                        </div>
+                                      </div>
+                                    <!-- button  -->
+                                    <button
+                                        class="flex w-full justify-center rounded bg-blue-600 p-3 font-medium text-white hover:bg-blue-500">
+                                        Sign In
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- sign up form  -->
+                           <div class="rounded-sm border border-solid bg-white ">
+                            <div class="border-b border-solid px-6 py-4 ">
+                                <h3 class="font-medium text-black ">
+                                    Sign Up Form
+                                </h3>
+                            </div>
+                            <form action="#">
+                                <div class="p-6">
+                                       <!-- name -->
+                                       <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Name <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="email" placeholder="Enter your Name"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- email -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Email <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="email" placeholder="Enter your email address"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- password -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                            Password <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="password" placeholder="Enter Password"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!--re-Type password -->
+                                    <div class="mb-4">
+                                        <label class="mb-3 block text-sm font-medium text-black ">
+                                           Re-Type Password <span class="text-meta-1">*</span>
+                                        </label>
+                                        <input type="password" placeholder="Enter Re-Type Password"
+                                            class="w-full rounded border-[1.5px] border-solid bg-transparent px-5 py-3 font-normal text-black outline-none transition ">
+                                    </div>
+                                    <!-- button  -->
+                                    <button
+                                        class="flex w-full justify-center rounded bg-blue-600 p-3 font-medium text-white hover:bg-blue-500">
+                                        Sign up
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- main script -->
+            <script src="./js/mainScript.js"></script>
+
+            <!-- flowbite script  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</body>
+
+</html>

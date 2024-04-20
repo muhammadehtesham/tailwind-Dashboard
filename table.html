@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- css  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- flowbite link  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="flex">
+        <!-- SIDEBAR -->
+        <div id="sideBar"
+            class="fixed z-10 lg:w-[17em] w-0 h-[100vh] bg-[#1c2434] transition-width duration-300 ease-in-out">
+            <div id="sideBar_inner">
+                <!--sideBar header  -->
+                <div id="sideBar_header" class=" h-20 p-5 px-5 flex justify-between items-center">
+                    <img src="./images/logo/logo.svg" alt="">
+                    <i class="fa-solid fa-arrow-left text-white lg:hidden relative right-3"></i>
+                </div>
+
+                <!-- sidebar nav  -->
+                <nav class="h-[90vh] p-10 px-4 overflow-y-scroll scrollbar-hide">
+                    <!-- sidebar menu group -->
+                    <div id="sideBar-menu">
+                        <div id="sideBar-menu-inner">
+                            <h3 class="ml-4 text-base text-slate-400 uppercase">Menu</h3>
+                            <ul class="px-0 text-base mt-4">
+                                <!-- dashboard dropdown  -->
+                                <li class="dropdown relative text-white bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fas fa-border-all mr-2"></i> Dashboard
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform "></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu  text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">eCommerce</a></li>
+                                    <li class="hover:text-white"><a href="#">Analytics</a></li>
+                                    <li class="hover:text-white"><a href="#">Marketing</a></li>
+                                    <li class="hover:text-white"><a href="#">CRM</a></li>
+                                    <li class="hover:text-white"><a href="#">Stocks</a></li>
+                                </ul>
+
+                                <!-- Calendar  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-calendar mr-2"></i>Calendar
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Profile  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-user mr-2"></i>Profile
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- Task dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-list"></i> Task
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">List</a></li>
+                                    <li class="hover:text-white"><a href="#">Kanban</a></li>
+
+                                </ul>
+
+                                <!-- Forms dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-file-word mr-2"></i> Forms
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Form Elements</a></li>
+                                    <li class="hover:text-white"><a href="#">Form Layout</a></li>
+                                    <li class="hover:text-white"><a href="#">Pro Form Layout</a></li>
+                                </ul>
+
+                                <!-- Tables dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-table mr-2"></i> Tables
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Tables</a></li>
+                                    <li class="hover:text-white"><a href="#">Pro Tables</a></li>
+                                </ul>
+
+                                <!-- Pages dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-file-lines mr-2"></i> Pages
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Setting</a></li>
+                                    <li class="hover:text-white"><a href="#">File Manager</a></li>
+                                    <li class="hover:text-white"><a href="#">Data Tables</a></li>
+                                    <li class="hover:text-white"><a href="#">Pricing Tables</a></li>
+                                    <li class="hover:text-white"><a href="#">Faq's</a></li>
+                                    <li class="hover:text-white"><a href="#">Teams</a></li>
+                                    <li class="hover:text-white"><a href="#">Teams & Conditions</a></li>
+                                    <li class="hover:text-white"><a href="#">Mail Success</a></li>
+                                </ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- sidebar support group  -->
+                    <div id="sideBar-support">
+                        <div id="sideBar-support-inner">
+                            <h3 class="ml-4 mt-4 text-base text-slate-400 uppercase">support</h3>
+                            <ul class="px-0 text-base mt-2">
+                                <!-- Messages  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-envelope mr-2"></i> Messages
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Inbox  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-download mr-2"></i>Inbox
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Invoice  -->
+                                <li class="relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-receipt mr-2"></i>Invoice
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- side bar other group  -->
+                    <div id="sideBar-other">
+                        <div id="sideBar-other-inner">
+                            <h3 class="ml-4 mt-4 text-base text-slate-400 uppercase">Others</h3>
+                            <ul class="px-0 text-base mt-2">
+                                <!-- Chart dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="rotate_arrow fa-solid fa-chart-pie mr-2 transform -rotate-90"></i>
+                                            Chart
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Basic Chart</a></li>
+                                    <li class="hover:text-white"><a href="#">Advanced Chart</a></li>
+                                </ul>
+
+                                <!-- UI Elements dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-regular fa-building mr-2"></i> UI Elements
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Accordion</a></li>
+                                    <li class="hover:text-white"><a href="#">Alerts</a></li>
+                                    <li class="hover:text-white"><a href="#">Avatars</a></li>
+                                    <li class="hover:text-white"><a href="#">Badge</a></li>
+                                    <li class="hover:text-white"><a href="#">Breadcrumb</a></li>
+                                    <li class="hover:text-white"><a href="#">Buttons</a></li>
+                                    <li class="hover:text-white"><a href="#">Buttons Group</a></li>
+                                    <li class="hover:text-white"><a href="#">Cards</a></li>
+                                    <li class="hover:text-white"><a href="#">Carousel</a></li>
+                                    <li class="hover:text-white"><a href="#">Dropdowns</a></li>
+                                    <li class="hover:text-white"><a href="#">Images</a></li>
+                                    <li class="hover:text-white"><a href="#">List</a></li>
+                                    <li class="hover:text-white"><a href="#">Modals</a></li>
+                                    <li class="hover:text-white"><a href="#">Notifications</a></li>
+                                    <li class="hover:text-white"><a href="#">Pagination</a></li>
+                                    <li class="hover:text-white"><a href="#">Popovers</a></li>
+                                    <li class="hover:text-white"><a href="#">Progress</a></li>
+                                    <li class="hover:text-white"><a href="#">Spinners</a></li>
+                                    <li class="hover:text-white"><a href="#">Tabs</a></li>
+                                    <li class="hover:text-white"><a href="#">Tooltips</a></li>
+                                    <li class="hover:text-white"><a href="#">Videos</a></li>
+                                </ul>
+
+                                <!-- Authentication dropdown  -->
+                                <li class="dropdown relative text-white hover:bg-[#333a48]">
+                                    <a href="#" class="flex items-center justify-between px-4 py-2 ">
+                                        <span class="flex items-center">
+                                            <i class="fa-solid fa-fingerprint mr-2"></i> Authentication
+                                        </span>
+                                        <i class="rotate_arrow fas fa-angle-down transform -rotate-90"></i>
+                                    </a>
+                                </li>
+                                <ul class="dropdown_menu hidden text-slate-400 pl-10 py-2 leading-9">
+                                    <li class="hover:text-white"><a href="#">Sign In</a></li>
+                                    <li class="hover:text-white"><a href="#">Sign Up</a></li>
+                                    <li class="hover:text-white"><a href="#">Reset Password</a></li>
+                                    <li class="hover:text-white"><a href="#">Coming Soon</a></li>
+                                    <li class="hover:text-white"><a href="#">2 Step Verification</a></li>
+                                    <li class="hover:text-white"><a href="#">Under Maintenance</a></li>
+                                </ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- dashboard Content  -->
+        <div id="dashboard_content" class="fixed lg:w-[calc(100%-17rem)] w-[100%] right-0 ">
+            <!-- dashboard content  header -->
+            <div id="dashboard_header" class="grid grid-cols-10 px-6 h-20 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  ">
+                <!-- on small screen hamburgur  -->
+                <div id="hamburgur" class="flex items-center lg:hidden col-span-2 ">
+                    <div id="sidebarToggle" class="border-2 border-gray-400 p-1 px-2">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </div>
+                    <img src="./images/logo/logo-icon.svg" alt="" class="ml-2 ">
+                </div>
+                <!-- left    -->
+                <div id="dashboard_header_left" class="col-span-4 items-center hidden lg:flex">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass fa-lg text-gray-400 "></i>
+                        <input type="text" placeholder="Type to search..." class="  outline-0 border-0 ">
+                    </div>
+                </div>
+                <!-- right  -->
+                <div id="dashboard_header_right" class="flex justify-end items-center lg:col-span-6 col-span-8 ">
+                    <!-- light mode dark mode  -->
+                    <div class="switch_mode rounded-full ml-3 bg-gray-200 h-8 w-8 flex justify-center items-center">
+                        <i class="fa-regular fa-sun text-gray-400"></i>
+                    </div>
+                    <!-- bell notification -->
+                    <div class="rounded-full ml-3 bg-gray-200 h-8 w-8 flex justify-center items-center">
+                        <i class="fa-regular fa-bell text-gray-400"></i>
+                    </div>
+                    <!-- Messages -->
+                    <div class="rounded-full ml-3 bg-gray-200 h-8 w-8 flex justify-center items-center">
+                        <i class="fa-regular fa-comment-dots text-gray-400"></i>
+                    </div>
+                    <!-- profile -->
+                    <div id="profile dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" type="button"
+                        class="flex items-center sm:ml-6 ml-2 " id="">
+                        <div class="ml-2 hidden sm:block">
+                            <h1 class="text-base ">Angela Juli</h1>
+                            <p class="text-sm text-gray-500">UX Designer</p>
+                        </div>
+                        <div class="sm:w-12 sm:h-12 w-9 h-9 bg-gray-300 rounded-full overflow-hidden sm:ml-6 ">
+                            <img class="w-full h-full object-cover" src="./images/user-01.png" alt="Profile Picture">
+                        </div>
+                        <div class="ml-6 mr-3 hidden sm:block">
+                            <i class="rotate_arrow fas fa-angle-down transform text-gray-400"></i>
+                        </div>
+                    </div>
+                    <!-- profile dropdow content  "click on profile" -->
+                    <div id="dropdownDots" class="z-10 hidden bg-white  rounded-lg shadow w-44">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownMenuIconButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
+                                link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dashboard main content-->
+            <div id="dashboard_main_content"
+                class="-z-10 top-20  h-[88vh]  overflow-scroll scrollbar-hide pt-10 p-6  bg-slate-100">
+                <h3 class="text-2xl font-semibold mb-5">Pro Form Layout</h3>
+                <!--  Top channels-->
+                <div
+                    class="bg-white shadow-[rgba(13,_38,_76,_0.19)_0px_0px_20px]  p-6 col-span-9 md:col-span-9  h-max-[600px] mb-6 overflow-y-scroll scrollbar-hide">
+                    <h3 class="text-2xl font-semibold mb-5">Top channels</h3>
+                    <table class="w-full text-sm text-left text-gray-400">
+                        <thead class="text-sm text-gray-400 uppercase bg-gray-100 ">
+                            <tr>
+                                <th scope="col" class="px-6 py-5 uppercase">
+                                    Sources
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    visitors
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    revenues
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    sales
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    Conversion
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class="rounded-full bg-gray-200 h-12 w-12 flex justify-center items-center">
+                                        <i class="fa-regular fa-comment-dots fa-xl text-blue-800"></i>
+                                    </div>
+                                    <span>
+                                        Google
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    3.5k
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500 ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-blue-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 2 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class="rounded-full bg-gray-200 h-12 w-12 flex justify-center items-center">
+                                        <i class="fa-regular fa-comment-dots fa-xl text-blue-800"></i>
+                                    </div>
+                                    <span>
+                                        Google
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    3.5k
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500 ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-blue-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 3 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class="rounded-full bg-gray-200 h-12 w-12 flex justify-center items-center">
+                                        <i class="fa-regular fa-comment-dots fa-xl text-blue-800"></i>
+                                    </div>
+                                    <span>
+                                        Google
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    3.5k
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500 ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-blue-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 4 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class="rounded-full bg-gray-200 h-12 w-12 flex justify-center items-center">
+                                        <i class="fa-regular fa-comment-dots fa-xl text-blue-800"></i>
+                                    </div>
+                                    <span>
+                                        Google
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    3.5k
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500 ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-blue-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 5 -->
+                            <tr class="bg-white  hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class="rounded-full bg-gray-200 h-12 w-12 flex justify-center items-center">
+                                        <i class="fa-regular fa-comment-dots fa-xl text-blue-800"></i>
+                                    </div>
+                                    <span>
+                                        Google
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    3.5k
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500 ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-blue-500">
+                                    5.8%
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--  Products table-->
+                <div
+                    class="bg-white shadow-[rgba(13,_38,_76,_0.19)_0px_0px_20px]  col-span-9 md:col-span-9  h-max-[600px] mb-6 overflow-y-scroll scrollbar-hide">
+                    <h3 class="text-2xl font-semibold mb-5 px-5 pt-5">Top Products</h3>
+                    <table class="w-full text-sm text-left text-gray-400">
+                        <thead class="text-sm text-gray-400 uppercase bg-gray-100 ">
+                            <tr>
+                                <th scope="col" class="px-6 py-5 uppercase">
+                                    Product Name
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    catagory
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    price
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                   Sold
+                                </th>
+                                <th scope="col" class="px-6 py-5 uppercase text-center">
+                                    profit
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class=" h-12 w-12 flex justify-center items-center">
+                                        <img src="./images/product-01.png" alt="">
+                                    </div>
+                                    <span>
+                                        MacBook 
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    Electronics
+                                </td>
+                                <td class="px-6 py-4 text-center  ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 2 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class=" h-12 w-12 flex justify-center items-center">
+                                        <img src="./images/product-01.png" alt="">
+                                    </div>
+                                    <span>
+                                        MacBook 
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    Electronics
+                                </td>
+                                <td class="px-6 py-4 text-center  ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 3 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class=" h-12 w-12 flex justify-center items-center">
+                                        <img src="./images/product-01.png" alt="">
+                                    </div>
+                                    <span>
+                                        MacBook 
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    Electronics
+                                </td>
+                                <td class="px-6 py-4 text-center  ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 4 -->
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center text-center">
+                                    <div class=" h-12 w-12 flex justify-center items-center">
+                                        <img src="./images/product-01.png" alt="">
+                                    </div>
+                                    <span>
+                                        MacBook 
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    Electronics
+                                </td>
+                                <td class="px-6 py-4 text-center  ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500">
+                                    5.8%
+                                </td>
+                            </tr>
+                            <!-- 5 -->
+                            <tr class="bg-white  hover:bg-gray-100 ">
+                                <td class="flex items-center gap-3 px-6 py-4 text-center ">
+                                    <div class=" h-12 w-12 flex justify-center items-center">
+                                        <img src="./images/product-01.png" alt="">
+                                    </div>
+                                    <span>
+                                        MacBook 
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    Electronics
+                                </td>
+                                <td class="px-6 py-4 text-center  ">
+                                    $5,470
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    590
+                                </td>
+                                <td class="px-6 py-4 text-center text-green-500">
+                                    5.8%
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- table 3 -->
+                <div
+                class="bg-white shadow-[rgba(13,_38,_76,_0.19)_0px_0px_20px]  p-6 col-span-9 md:col-span-9  h-max-[600px] mb-6 overflow-y-scroll scrollbar-hide">
+                <h3 class="text-2xl font-semibold mb-5">Top channels</h3>
+                <table class="w-full text-sm text-left text-gray-400">
+                    <thead class="text-sm text-gray-400 uppercase bg-gray-100 ">
+                        <tr>
+                            <th scope="col" class="px-6 py-5 uppercase">
+                                Packages
+                            </th>
+                            <th scope="col" class="px-6 py-5 uppercase text-center">
+                               Inviice Date
+                            </th>
+                            <th scope="col" class="px-6 py-5 uppercase text-center">
+                                Status
+                            </th>
+                            <th scope="col" class="px-6 py-5 uppercase text-center">
+                               Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1 -->
+                        <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                            <td class=" flex flex-col py-4 px-6  ">
+                                <div class="">
+                                    Free Package
+                                </div>
+                                <span>
+                                   $9.00
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                Jan 13,2023
+                            </td>
+                            <td class="px-6 py-4 text-center ">
+                                <p class="inline-flex rounded-full bg-green-100 bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
+                                    Paid
+                                  </p>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                590
+                            </td>
+                           
+                        </tr>
+                        <!-- 2 -->
+                        <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                            <td class=" flex flex-col py-4 px-6  ">
+                                <div class="">
+                                    Free Package
+                                </div>
+                                <span>
+                                   $9.00
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                Jan 13,2023
+                            </td>
+                            <td class="px-6 py-4 text-center  ">
+                                <p class="inline-flex rounded-full bg-green-100 bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
+                                    Paid
+                                  </p>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                590
+                            </td>
+                           
+                        </tr>
+                        <!-- 3 -->
+                        <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                            <td class=" flex flex-col py-4 px-6  ">
+                                <div class="">
+                                    Free Package
+                                </div>
+                                <span>
+                                   $9.00
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                Jan 13,2023
+                            </td>
+                            <td class="px-6 py-4 text-center ">
+                                <p class="inline-flex rounded-full bg-red-100 bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
+                                    Unpaid
+                                  </p>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                590
+                            </td>
+                           
+                        </tr>
+                        <!-- 4 -->
+                        <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                            <td class=" flex flex-col py-4 px-6  ">
+                                <div class="">
+                                    Free Package
+                                </div>
+                                <span>
+                                   $9.00
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                Jan 13,2023
+                            </td>
+                            <td class="px-6 py-4 text-center text-green-500 ">
+                                Paid
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                590
+                            </td>
+                           
+                        </tr>
+                        <!-- 5 -->
+                        <tr class="bg-white border-b border-gray-200 hover:bg-gray-100 ">
+                            <td class=" flex flex-col py-4 px-6  ">
+                                <div class="">
+                                    Free Package
+                                </div>
+                                <span>
+                                   $9.00
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                Jan 13,2023
+                            </td>
+                            <td class="px-6 py-4 text-center text-green-500 ">
+                                Paid
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                590
+                            </td>
+                           
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+                <!-- skkss -->
+                <div class="rounded-sm border border-solid bg-white px-5 pb-2 pt-6 sm:px-7 xl:pb-1">
+                    <div class="max-w-full overflow-x-auto">
+                      <table class="w-full table-auto">
+                        <thead>
+                          <tr class="bg-gray-2 text-left">
+                            <th class="min-w-[220px] px-4 py-4 font-medium text-black  xl:pl-11">
+                              Package
+                            </th>
+                            <th class="min-w-[150px] px-4 py-4 font-medium text-black ">
+                              Invoice date
+                            </th>
+                            <th class="min-w-[120px] px-4 py-4 font-medium text-black ">
+                              Status
+                            </th>
+                            <th class="px-4 py-4 font-medium text-black ">
+                              Actions
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="border-b border-[#eee] px-4 py-5 pl-9  xl:pl-11">
+                              <h5 class="font-medium text-black ">Free Package</h5>
+                              <p class="text-sm">$0.00</p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <p class="text-black ">Jan 13,2023</p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
+                                Paid
+                              </p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <div class="flex items-center space-x-3.5">
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z" fill=""></path>
+                                    <path d="M9 11.3906C7.67812 11.3906 6.60938 10.3219 6.60938 9C6.60938 7.67813 7.67812 6.60938 9 6.60938C10.3219 6.60938 11.3906 7.67813 11.3906 9C11.3906 10.3219 10.3219 11.3906 9 11.3906ZM9 7.875C8.38125 7.875 7.875 8.38125 7.875 9C7.875 9.61875 8.38125 10.125 9 10.125C9.61875 10.125 10.125 9.61875 10.125 9C10.125 8.38125 9.61875 7.875 9 7.875Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7535 2.47502H11.5879V1.9969C11.5879 1.15315 10.9129 0.478149 10.0691 0.478149H7.90352C7.05977 0.478149 6.38477 1.15315 6.38477 1.9969V2.47502H4.21914C3.40352 2.47502 2.72852 3.15002 2.72852 3.96565V4.8094C2.72852 5.42815 3.09414 5.9344 3.62852 6.1594L4.07852 15.4688C4.13477 16.6219 5.09102 17.5219 6.24414 17.5219H11.7004C12.8535 17.5219 13.8098 16.6219 13.866 15.4688L14.3441 6.13127C14.8785 5.90627 15.2441 5.3719 15.2441 4.78127V3.93752C15.2441 3.15002 14.5691 2.47502 13.7535 2.47502ZM7.67852 1.9969C7.67852 1.85627 7.79102 1.74377 7.93164 1.74377H10.0973C10.2379 1.74377 10.3504 1.85627 10.3504 1.9969V2.47502H7.70664V1.9969H7.67852ZM4.02227 3.96565C4.02227 3.85315 4.10664 3.74065 4.24727 3.74065H13.7535C13.866 3.74065 13.9785 3.82502 13.9785 3.96565V4.8094C13.9785 4.9219 13.8941 5.0344 13.7535 5.0344H4.24727C4.13477 5.0344 4.02227 4.95002 4.02227 4.8094V3.96565ZM11.7285 16.2563H6.27227C5.79414 16.2563 5.40039 15.8906 5.37227 15.3844L4.95039 6.2719H13.0785L12.6566 15.3844C12.6004 15.8625 12.2066 16.2563 11.7285 16.2563Z" fill=""></path>
+                                    <path d="M9.00039 9.11255C8.66289 9.11255 8.35352 9.3938 8.35352 9.75942V13.3313C8.35352 13.6688 8.63477 13.9782 9.00039 13.9782C9.33789 13.9782 9.64727 13.6969 9.64727 13.3313V9.75942C9.64727 9.3938 9.33789 9.11255 9.00039 9.11255Z" fill=""></path>
+                                    <path d="M11.2502 9.67504C10.8846 9.64692 10.6033 9.90004 10.5752 10.2657L10.4064 12.7407C10.3783 13.0782 10.6314 13.3875 10.9971 13.4157C11.0252 13.4157 11.0252 13.4157 11.0533 13.4157C11.3908 13.4157 11.6721 13.1625 11.6721 12.825L11.8408 10.35C11.8408 9.98442 11.5877 9.70317 11.2502 9.67504Z" fill=""></path>
+                                    <path d="M6.72245 9.67504C6.38495 9.70317 6.1037 10.0125 6.13182 10.35L6.3287 12.825C6.35683 13.1625 6.63808 13.4157 6.94745 13.4157C6.97558 13.4157 6.97558 13.4157 7.0037 13.4157C7.3412 13.3875 7.62245 13.0782 7.59433 12.7407L7.39745 10.2657C7.39745 9.90004 7.08808 9.64692 6.72245 9.67504Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.8754 11.6719C16.5379 11.6719 16.2285 11.9531 16.2285 12.3187V14.8219C16.2285 15.075 16.0316 15.2719 15.7785 15.2719H2.22227C1.96914 15.2719 1.77227 15.075 1.77227 14.8219V12.3187C1.77227 11.9812 1.49102 11.6719 1.12539 11.6719C0.759766 11.6719 0.478516 11.9531 0.478516 12.3187V14.8219C0.478516 15.7781 1.23789 16.5375 2.19414 16.5375H15.7785C16.7348 16.5375 17.4941 15.7781 17.4941 14.8219V12.3187C17.5223 11.9531 17.2129 11.6719 16.8754 11.6719Z" fill=""></path>
+                                    <path d="M8.55074 12.3469C8.66324 12.4594 8.83199 12.5156 9.00074 12.5156C9.16949 12.5156 9.31012 12.4594 9.45074 12.3469L13.4726 8.43752C13.7257 8.1844 13.7257 7.79065 13.5007 7.53752C13.2476 7.2844 12.8539 7.2844 12.6007 7.5094L9.64762 10.4063V2.1094C9.64762 1.7719 9.36637 1.46252 9.00074 1.46252C8.66324 1.46252 8.35387 1.74377 8.35387 2.1094V10.4063L5.40074 7.53752C5.14762 7.2844 4.75387 7.31252 4.50074 7.53752C4.24762 7.79065 4.27574 8.1844 4.50074 8.43752L8.55074 12.3469Z" fill=""></path>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-soliddark xl:pl-11">
+                              <h5 class="font-medium text-black dark:text-white">
+                                Standard Package
+                              </h5>
+                              <p class="text-sm">$59.00</p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <p class="text-black dark:text-white">Jan 13,2023</p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
+                                Paid
+                              </p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <div class="flex items-center space-x-3.5">
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z" fill=""></path>
+                                    <path d="M9 11.3906C7.67812 11.3906 6.60938 10.3219 6.60938 9C6.60938 7.67813 7.67812 6.60938 9 6.60938C10.3219 6.60938 11.3906 7.67813 11.3906 9C11.3906 10.3219 10.3219 11.3906 9 11.3906ZM9 7.875C8.38125 7.875 7.875 8.38125 7.875 9C7.875 9.61875 8.38125 10.125 9 10.125C9.61875 10.125 10.125 9.61875 10.125 9C10.125 8.38125 9.61875 7.875 9 7.875Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7535 2.47502H11.5879V1.9969C11.5879 1.15315 10.9129 0.478149 10.0691 0.478149H7.90352C7.05977 0.478149 6.38477 1.15315 6.38477 1.9969V2.47502H4.21914C3.40352 2.47502 2.72852 3.15002 2.72852 3.96565V4.8094C2.72852 5.42815 3.09414 5.9344 3.62852 6.1594L4.07852 15.4688C4.13477 16.6219 5.09102 17.5219 6.24414 17.5219H11.7004C12.8535 17.5219 13.8098 16.6219 13.866 15.4688L14.3441 6.13127C14.8785 5.90627 15.2441 5.3719 15.2441 4.78127V3.93752C15.2441 3.15002 14.5691 2.47502 13.7535 2.47502ZM7.67852 1.9969C7.67852 1.85627 7.79102 1.74377 7.93164 1.74377H10.0973C10.2379 1.74377 10.3504 1.85627 10.3504 1.9969V2.47502H7.70664V1.9969H7.67852ZM4.02227 3.96565C4.02227 3.85315 4.10664 3.74065 4.24727 3.74065H13.7535C13.866 3.74065 13.9785 3.82502 13.9785 3.96565V4.8094C13.9785 4.9219 13.8941 5.0344 13.7535 5.0344H4.24727C4.13477 5.0344 4.02227 4.95002 4.02227 4.8094V3.96565ZM11.7285 16.2563H6.27227C5.79414 16.2563 5.40039 15.8906 5.37227 15.3844L4.95039 6.2719H13.0785L12.6566 15.3844C12.6004 15.8625 12.2066 16.2563 11.7285 16.2563Z" fill=""></path>
+                                    <path d="M9.00039 9.11255C8.66289 9.11255 8.35352 9.3938 8.35352 9.75942V13.3313C8.35352 13.6688 8.63477 13.9782 9.00039 13.9782C9.33789 13.9782 9.64727 13.6969 9.64727 13.3313V9.75942C9.64727 9.3938 9.33789 9.11255 9.00039 9.11255Z" fill=""></path>
+                                    <path d="M11.2502 9.67504C10.8846 9.64692 10.6033 9.90004 10.5752 10.2657L10.4064 12.7407C10.3783 13.0782 10.6314 13.3875 10.9971 13.4157C11.0252 13.4157 11.0252 13.4157 11.0533 13.4157C11.3908 13.4157 11.6721 13.1625 11.6721 12.825L11.8408 10.35C11.8408 9.98442 11.5877 9.70317 11.2502 9.67504Z" fill=""></path>
+                                    <path d="M6.72245 9.67504C6.38495 9.70317 6.1037 10.0125 6.13182 10.35L6.3287 12.825C6.35683 13.1625 6.63808 13.4157 6.94745 13.4157C6.97558 13.4157 6.97558 13.4157 7.0037 13.4157C7.3412 13.3875 7.62245 13.0782 7.59433 12.7407L7.39745 10.2657C7.39745 9.90004 7.08808 9.64692 6.72245 9.67504Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.8754 11.6719C16.5379 11.6719 16.2285 11.9531 16.2285 12.3187V14.8219C16.2285 15.075 16.0316 15.2719 15.7785 15.2719H2.22227C1.96914 15.2719 1.77227 15.075 1.77227 14.8219V12.3187C1.77227 11.9812 1.49102 11.6719 1.12539 11.6719C0.759766 11.6719 0.478516 11.9531 0.478516 12.3187V14.8219C0.478516 15.7781 1.23789 16.5375 2.19414 16.5375H15.7785C16.7348 16.5375 17.4941 15.7781 17.4941 14.8219V12.3187C17.5223 11.9531 17.2129 11.6719 16.8754 11.6719Z" fill=""></path>
+                                    <path d="M8.55074 12.3469C8.66324 12.4594 8.83199 12.5156 9.00074 12.5156C9.16949 12.5156 9.31012 12.4594 9.45074 12.3469L13.4726 8.43752C13.7257 8.1844 13.7257 7.79065 13.5007 7.53752C13.2476 7.2844 12.8539 7.2844 12.6007 7.5094L9.64762 10.4063V2.1094C9.64762 1.7719 9.36637 1.46252 9.00074 1.46252C8.66324 1.46252 8.35387 1.74377 8.35387 2.1094V10.4063L5.40074 7.53752C5.14762 7.2844 4.75387 7.31252 4.50074 7.53752C4.24762 7.79065 4.27574 8.1844 4.50074 8.43752L8.55074 12.3469Z" fill=""></path>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-soliddark xl:pl-11">
+                              <h5 class="font-medium text-black dark:text-white">
+                                Business Package
+                              </h5>
+                              <p class="text-sm">$99.00</p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <p class="text-black dark:text-white">Jan 13,2023</p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <p class="inline-flex rounded-full bg-danger bg-opacity-10 px-3 py-1 text-sm font-medium text-danger">
+                                Unpaid
+                              </p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-soliddark">
+                              <div class="flex items-center space-x-3.5">
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z" fill=""></path>
+                                    <path d="M9 11.3906C7.67812 11.3906 6.60938 10.3219 6.60938 9C6.60938 7.67813 7.67812 6.60938 9 6.60938C10.3219 6.60938 11.3906 7.67813 11.3906 9C11.3906 10.3219 10.3219 11.3906 9 11.3906ZM9 7.875C8.38125 7.875 7.875 8.38125 7.875 9C7.875 9.61875 8.38125 10.125 9 10.125C9.61875 10.125 10.125 9.61875 10.125 9C10.125 8.38125 9.61875 7.875 9 7.875Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7535 2.47502H11.5879V1.9969C11.5879 1.15315 10.9129 0.478149 10.0691 0.478149H7.90352C7.05977 0.478149 6.38477 1.15315 6.38477 1.9969V2.47502H4.21914C3.40352 2.47502 2.72852 3.15002 2.72852 3.96565V4.8094C2.72852 5.42815 3.09414 5.9344 3.62852 6.1594L4.07852 15.4688C4.13477 16.6219 5.09102 17.5219 6.24414 17.5219H11.7004C12.8535 17.5219 13.8098 16.6219 13.866 15.4688L14.3441 6.13127C14.8785 5.90627 15.2441 5.3719 15.2441 4.78127V3.93752C15.2441 3.15002 14.5691 2.47502 13.7535 2.47502ZM7.67852 1.9969C7.67852 1.85627 7.79102 1.74377 7.93164 1.74377H10.0973C10.2379 1.74377 10.3504 1.85627 10.3504 1.9969V2.47502H7.70664V1.9969H7.67852ZM4.02227 3.96565C4.02227 3.85315 4.10664 3.74065 4.24727 3.74065H13.7535C13.866 3.74065 13.9785 3.82502 13.9785 3.96565V4.8094C13.9785 4.9219 13.8941 5.0344 13.7535 5.0344H4.24727C4.13477 5.0344 4.02227 4.95002 4.02227 4.8094V3.96565ZM11.7285 16.2563H6.27227C5.79414 16.2563 5.40039 15.8906 5.37227 15.3844L4.95039 6.2719H13.0785L12.6566 15.3844C12.6004 15.8625 12.2066 16.2563 11.7285 16.2563Z" fill=""></path>
+                                    <path d="M9.00039 9.11255C8.66289 9.11255 8.35352 9.3938 8.35352 9.75942V13.3313C8.35352 13.6688 8.63477 13.9782 9.00039 13.9782C9.33789 13.9782 9.64727 13.6969 9.64727 13.3313V9.75942C9.64727 9.3938 9.33789 9.11255 9.00039 9.11255Z" fill=""></path>
+                                    <path d="M11.2502 9.67504C10.8846 9.64692 10.6033 9.90004 10.5752 10.2657L10.4064 12.7407C10.3783 13.0782 10.6314 13.3875 10.9971 13.4157C11.0252 13.4157 11.0252 13.4157 11.0533 13.4157C11.3908 13.4157 11.6721 13.1625 11.6721 12.825L11.8408 10.35C11.8408 9.98442 11.5877 9.70317 11.2502 9.67504Z" fill=""></path>
+                                    <path d="M6.72245 9.67504C6.38495 9.70317 6.1037 10.0125 6.13182 10.35L6.3287 12.825C6.35683 13.1625 6.63808 13.4157 6.94745 13.4157C6.97558 13.4157 6.97558 13.4157 7.0037 13.4157C7.3412 13.3875 7.62245 13.0782 7.59433 12.7407L7.39745 10.2657C7.39745 9.90004 7.08808 9.64692 6.72245 9.67504Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.8754 11.6719C16.5379 11.6719 16.2285 11.9531 16.2285 12.3187V14.8219C16.2285 15.075 16.0316 15.2719 15.7785 15.2719H2.22227C1.96914 15.2719 1.77227 15.075 1.77227 14.8219V12.3187C1.77227 11.9812 1.49102 11.6719 1.12539 11.6719C0.759766 11.6719 0.478516 11.9531 0.478516 12.3187V14.8219C0.478516 15.7781 1.23789 16.5375 2.19414 16.5375H15.7785C16.7348 16.5375 17.4941 15.7781 17.4941 14.8219V12.3187C17.5223 11.9531 17.2129 11.6719 16.8754 11.6719Z" fill=""></path>
+                                    <path d="M8.55074 12.3469C8.66324 12.4594 8.83199 12.5156 9.00074 12.5156C9.16949 12.5156 9.31012 12.4594 9.45074 12.3469L13.4726 8.43752C13.7257 8.1844 13.7257 7.79065 13.5007 7.53752C13.2476 7.2844 12.8539 7.2844 12.6007 7.5094L9.64762 10.4063V2.1094C9.64762 1.7719 9.36637 1.46252 9.00074 1.46252C8.66324 1.46252 8.35387 1.74377 8.35387 2.1094V10.4063L5.40074 7.53752C5.14762 7.2844 4.75387 7.31252 4.50074 7.53752C4.24762 7.79065 4.27574 8.1844 4.50074 8.43752L8.55074 12.3469Z" fill=""></path>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-4 py-5 pl-9 xl:pl-11">
+                              <h5 class="font-medium text-black dark:text-white">
+                                Standard Package
+                              </h5>
+                              <p class="text-sm">$59.00</p>
+                            </td>
+                            <td class="px-4 py-5">
+                              <p class="text-black dark:text-white">Jan 13,2023</p>
+                            </td>
+                            <td class="px-4 py-5">
+                              <p class="inline-flex rounded-full bg-warning bg-opacity-10 px-3 py-1 text-sm font-medium text-warning">
+                                Pending
+                              </p>
+                            </td>
+                            <td class="px-4 py-5">
+                              <div class="flex items-center space-x-3.5">
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z" fill=""></path>
+                                    <path d="M9 11.3906C7.67812 11.3906 6.60938 10.3219 6.60938 9C6.60938 7.67813 7.67812 6.60938 9 6.60938C10.3219 6.60938 11.3906 7.67813 11.3906 9C11.3906 10.3219 10.3219 11.3906 9 11.3906ZM9 7.875C8.38125 7.875 7.875 8.38125 7.875 9C7.875 9.61875 8.38125 10.125 9 10.125C9.61875 10.125 10.125 9.61875 10.125 9C10.125 8.38125 9.61875 7.875 9 7.875Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7535 2.47502H11.5879V1.9969C11.5879 1.15315 10.9129 0.478149 10.0691 0.478149H7.90352C7.05977 0.478149 6.38477 1.15315 6.38477 1.9969V2.47502H4.21914C3.40352 2.47502 2.72852 3.15002 2.72852 3.96565V4.8094C2.72852 5.42815 3.09414 5.9344 3.62852 6.1594L4.07852 15.4688C4.13477 16.6219 5.09102 17.5219 6.24414 17.5219H11.7004C12.8535 17.5219 13.8098 16.6219 13.866 15.4688L14.3441 6.13127C14.8785 5.90627 15.2441 5.3719 15.2441 4.78127V3.93752C15.2441 3.15002 14.5691 2.47502 13.7535 2.47502ZM7.67852 1.9969C7.67852 1.85627 7.79102 1.74377 7.93164 1.74377H10.0973C10.2379 1.74377 10.3504 1.85627 10.3504 1.9969V2.47502H7.70664V1.9969H7.67852ZM4.02227 3.96565C4.02227 3.85315 4.10664 3.74065 4.24727 3.74065H13.7535C13.866 3.74065 13.9785 3.82502 13.9785 3.96565V4.8094C13.9785 4.9219 13.8941 5.0344 13.7535 5.0344H4.24727C4.13477 5.0344 4.02227 4.95002 4.02227 4.8094V3.96565ZM11.7285 16.2563H6.27227C5.79414 16.2563 5.40039 15.8906 5.37227 15.3844L4.95039 6.2719H13.0785L12.6566 15.3844C12.6004 15.8625 12.2066 16.2563 11.7285 16.2563Z" fill=""></path>
+                                    <path d="M9.00039 9.11255C8.66289 9.11255 8.35352 9.3938 8.35352 9.75942V13.3313C8.35352 13.6688 8.63477 13.9782 9.00039 13.9782C9.33789 13.9782 9.64727 13.6969 9.64727 13.3313V9.75942C9.64727 9.3938 9.33789 9.11255 9.00039 9.11255Z" fill=""></path>
+                                    <path d="M11.2502 9.67504C10.8846 9.64692 10.6033 9.90004 10.5752 10.2657L10.4064 12.7407C10.3783 13.0782 10.6314 13.3875 10.9971 13.4157C11.0252 13.4157 11.0252 13.4157 11.0533 13.4157C11.3908 13.4157 11.6721 13.1625 11.6721 12.825L11.8408 10.35C11.8408 9.98442 11.5877 9.70317 11.2502 9.67504Z" fill=""></path>
+                                    <path d="M6.72245 9.67504C6.38495 9.70317 6.1037 10.0125 6.13182 10.35L6.3287 12.825C6.35683 13.1625 6.63808 13.4157 6.94745 13.4157C6.97558 13.4157 6.97558 13.4157 7.0037 13.4157C7.3412 13.3875 7.62245 13.0782 7.59433 12.7407L7.39745 10.2657C7.39745 9.90004 7.08808 9.64692 6.72245 9.67504Z" fill=""></path>
+                                  </svg>
+                                </button>
+                                <button class="hover:text-primary">
+                                  <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.8754 11.6719C16.5379 11.6719 16.2285 11.9531 16.2285 12.3187V14.8219C16.2285 15.075 16.0316 15.2719 15.7785 15.2719H2.22227C1.96914 15.2719 1.77227 15.075 1.77227 14.8219V12.3187C1.77227 11.9812 1.49102 11.6719 1.12539 11.6719C0.759766 11.6719 0.478516 11.9531 0.478516 12.3187V14.8219C0.478516 15.7781 1.23789 16.5375 2.19414 16.5375H15.7785C16.7348 16.5375 17.4941 15.7781 17.4941 14.8219V12.3187C17.5223 11.9531 17.2129 11.6719 16.8754 11.6719Z" fill=""></path>
+                                    <path d="M8.55074 12.3469C8.66324 12.4594 8.83199 12.5156 9.00074 12.5156C9.16949 12.5156 9.31012 12.4594 9.45074 12.3469L13.4726 8.43752C13.7257 8.1844 13.7257 7.79065 13.5007 7.53752C13.2476 7.2844 12.8539 7.2844 12.6007 7.5094L9.64762 10.4063V2.1094C9.64762 1.7719 9.36637 1.46252 9.00074 1.46252C8.66324 1.46252 8.35387 1.74377 8.35387 2.1094V10.4063L5.40074 7.53752C5.14762 7.2844 4.75387 7.31252 4.50074 7.53752C4.24762 7.79065 4.27574 8.1844 4.50074 8.43752L8.55074 12.3469Z" fill=""></path>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+            </div>
+
+
+            <!-- main script -->
+            <script src="./js/mainScript.js"></script>
+
+            <!-- flowbite script  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</body>
+
+</html>
